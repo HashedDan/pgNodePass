@@ -3,7 +3,7 @@ const databaseName = 'g4';
 module.exports = {
   development: {
     client: 'postgresql',
-    connection: `postgres://localhost:5432/${databaseName}`,
+    connection: process.env.PG_CONNECTION_STRING,
     migrations: {
       directory: __dirname + '/src/server/db/migrations'
     },
